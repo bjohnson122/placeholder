@@ -3,11 +3,25 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import Link from "next/link";
+import styles from './Layout.module.css'
 
-function Navbar({styles}) {
+function Navbar() {
   return (
-    <div className="nav">
+    <div className={styles.layout}     
+    //  style={{
+    //     margin: "0",
+    //     padding: " 0",
+    //     display: "flex",
+    //     height: "100px",
+    //     width: "100%",
+    //     fontSize: " calc(1rem + 1vw)",
+    //     justifyContent: "space-between",
+    //     alignItems: "center",
+    //   }}>
+    >
+        <span className={` ${styles.navIcons} navIcons`}>
       <a
+      className="test"
         href="https://github.com/bjohnson122"
         target="_blank"
         rel="noopener noreferrer"
@@ -29,11 +43,13 @@ function Navbar({styles}) {
         <MailOutlineIcon />
       </a>
       <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-      <span className={`${styles.scrollToTopIcon} scrollToTopIcon`}>BJ</span>
+      </span>
+      <span className={`${styles.scrollToTopIcon} scrollToTopIcon`}>Breana Johnson</span>
+     <span className={`${styles.pageLinks} pageLinks`}>
       <Link href="#about">About</Link>
       <Link href="#projects">Projects</Link>
       <Link href="#contact">Contact</Link>
-    </div>
+   </span> </div>
   );
 }
 
