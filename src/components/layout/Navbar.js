@@ -3,7 +3,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import Link from "next/link";
+import ArticleIcon from '@mui/icons-material/Article';
 // import { useScrollDirection } from 'hooks';
 
 
@@ -45,46 +45,57 @@ function Navbar() {
     <div
       className={`sticky ${
         scrollDirection === "down" ? "-top-24" : "top-0"
-      } flex items-start w-screen list-none p-3 h-12 bg-cyan-200 drop-shadow-lg  transition-all duration-500`}
+      } flex items-start w-screen list-none p-3 h-12 bg-cyan-200 drop-shadow-lg  transition-all duration-500 items-center`}
     >
-      <span className="w-1/4 flex justify-around ">
+      <span className="w-1/4 flex justify-around items-center">
         <li>
           <a
-            className="test"
+            className="text-[0.5rem] text-center block"
             href="https://github.com/bjohnson122"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GitHubIcon />
+            <GitHubIcon  className="text-center"/> <br/> GitHub
           </a>
         </li>
         <li>
           <a
+          className="text-[0.5rem] text-center block"
             href="https://linkedin.com/in/breanaj"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <LinkedInIcon />
+            <LinkedInIcon  className="text-center"/> <br/> LinkedIn
           </a>
         </li>
         <li>
           <a
+          className="text-[0.5rem] text-center block"
             href="mailto:brecjohnson@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <MailOutlineIcon />
+            <MailOutlineIcon className="text-center"/> <br/> Email
           </a>
         </li>
         <li>
-          <button
-            className="border-solid border-rose-600"
+        <a
+          className="text-[0.5rem] text-center block"
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Resume
-          </button>
+            <ArticleIcon className="text-center"/> <br/> Resume
+          </a>
+
+          {/* <button
+            className="border-red-500  border-2 rounded-md p-1">
+           <a href="/resume.pdf" target="_blank"
+            rel="noopener noreferrer">Resume</a> 
+            
+          
+            
+          </button> */}
         </li>
       </span>
       <span
