@@ -2,8 +2,15 @@ import React, { useState, useEffect } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import LightModeIcon from "@mui/icons-material/LightMode";
 import Link from "next/link";
 // import { useScrollDirection } from 'hooks';
+
+
+const scrollStyle = {
+  scrollBehavior: "smooth"
+}
+
 
 function Navbar() {
   function useScrollDirection() {
@@ -38,7 +45,7 @@ function Navbar() {
     <div
       className={`sticky ${
         scrollDirection === "down" ? "-top-24" : "top-0"
-      } flex items-start w-screen list-none p-3  bg-cyan-200 drop-shadow-lg  transition-all duration-500` }
+      } flex items-start w-screen list-none p-3 h-12 bg-cyan-200 drop-shadow-lg  transition-all duration-500`}
     >
       <span className="w-1/4 flex justify-around ">
         <li>
@@ -70,28 +77,35 @@ function Navbar() {
           </a>
         </li>
         <li>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <button
+            className="border-solid border-rose-600"
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Resume
-          </a>
+          </button>
         </li>
       </span>
-      <span className="text-2xl cursor-pointer font-zidan font-light text-rose-500 w-1/2 text-center" onClick={() => {window.scrollTo(0, 0)}}>
-        Breana Johnson
+      <span
+        className="text-2xl cursor-pointer font-zidan font-light text-rose-500 w-1/2 text-center"
+        onClick={() => {
+          window.scrollTo(0, 0);
+        }}
+      >
+        Breana <LightModeIcon className="text-sm" /> Johnson
       </span>
-      <span className="w-1/4 flex justify-around">
+      <span className="w-1/4 flex justify-around scroll-smooth">
         <li>
-          {" "}
-          <Link href="#about">About</Link>
+          <a href="#about">About</a>
         </li>
         <li>
-          {" "}
-          <Link href="#projects">Projects</Link>
+          <a href="#projects">Projects</a>
         </li>
         <li>
-          {" "}
-          <Link href="#contact">Contact</Link>
+          <a href="#contact">Contact</a>
         </li>
-      </span>{" "}
+      </span>
     </div>
   );
 }
