@@ -3,7 +3,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className='text-center p-5'>
+    <footer className='text-center p-5 bottom-0 w-screen relative text-sm'>
       © {new Date().getFullYear()} &middot; Built with Black Girl Magic by
       Breana J.
     </footer>
