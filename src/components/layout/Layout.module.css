@@ -1,0 +1,57 @@
+.layout {
+    display: flex;
+overflow-x: hidden;
+}
+
+
+.footer {
+  margin-top: var(--space-5);
+  font-size: var(--font-sm);
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+.nav {
+    background: rgb(133, 159, 221);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+   
+overflow-x: hidden;  
+  padding: 5px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*z-index: 9999; */
+}
+
+
+.scrollToTopIcon {
+  width: 50%;
+  text-align: center;
+  font-family: "Zidan";
+  color: rgb(172, 31, 120);
+  font-size: 2rem;
+}
+
+.navIcons {
+  width: 25%;
+  justify-content: space-around;
+  display: flex;
+  padding: 8px;
+  background-color: #dddddd;
+}
+
+.pageLinks {
+    padding-right: 5px;
+  width: 25%;
+  justify-content: space-around;
+  display: flex;
+  padding: 8px;
+  background-color: #dddddd;}

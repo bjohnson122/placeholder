@@ -2,3 +2,7 @@
   font-family: "Zidan";
   src: url("../../public/fonts/Zidan.woff");
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
