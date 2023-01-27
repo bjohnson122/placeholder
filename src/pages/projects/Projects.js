@@ -35,12 +35,6 @@ export default function Projects() {
       <br/>
       <h1>PROJECTS</h1>
       <br/>
-      <h1>PROJECTS</h1>
-      <br/>
-      <h1>PROJECTS</h1>
-      <br/>
-      <h1>PROJECTS</h1>
-      <br/>
       
       
       
