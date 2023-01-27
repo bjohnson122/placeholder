@@ -5,9 +5,11 @@ import styles from './Hero.module.css'
 
 export default function Hero() {
   return (
-    <div>
-        <h1 className='font-zidan text-center text-7xl mt-[2rem] md:mt-[1rem]'>Breana Johnson</h1>
-       
+    <div className='font-zidan text-center text-7xl mt-[2rem] md:mt-[1rem]'>
+      <h3>HERO SECTION </h3> <br/>
+        <h1 >Breana Johnson</h1>
+        <br/>
+       <hr className='font-bold'/>
     </div>
   )
 }
