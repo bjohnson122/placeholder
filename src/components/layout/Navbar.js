@@ -80,9 +80,9 @@ function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
   return (
     <div
-      className={`sticky ${
+      className={` ${
         scrollDirection === "down" ? "-top-24" : "top-0"
-      } flex w-screen lg:max-w-7xl list-none p-3 h-12  bg-blue-200 drop-shadow-lg  transition-all duration-500 items-center text-md `}
+      } flex w-screen list-none p-3 h-12  bg-blue-200 drop-shadow-lg  transition-all duration-500 items-center text-md md:sticky`}
     >
         {/* Left side of navbar w/ page links */}
       <span className="w-1/4 flex justify-around items-center text-center">
@@ -106,7 +106,7 @@ function Navbar() {
       
       {/* Logo */}
       <span
-        className="text-2xl cursor-pointer text-center font-zidan text-blue-800 w-1/2"
+        className="text-2xl text-center cursor-pointer font-zidan text-blue-800 w-1/2"
         onClick={() => {
           window.scrollTo(0, 0);
         }}
@@ -148,11 +148,11 @@ function Navbar() {
           {navbar ? <CloseIcon /> : <MenuIcon />}
         </button>
       </div>
-      <div
+      {/* <div
         className={`flex flex-col justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
           navbar ? "p-12 md:p-0 block" : "hidden"
         }`}
-      ></div>
+      ></div> */}
       {/* <ul className="h-screen md:h-auto items-center justify-center md:flex ">
           <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2  md:hover:text-purple-600 md:hover:bg-transparent">
             <Link href="#about" onClick={() => setNavbar(!navbar)}>
