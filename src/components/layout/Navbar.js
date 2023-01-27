@@ -80,12 +80,18 @@ function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
   return (
     <div
-      className={` ${
-        scrollDirection === "down" ? "-top-24" : "top-0"
-      } flex w-screen list-none p-3 h-12  bg-blue-200 drop-shadow-lg  transition-all duration-500 items-center text-md md:sticky`}
+      className={`fixed 
+      ${
+        scrollDirection === "down" ? "md:-top-24" : "md:top-0"
+      } 
+      flex w-screen list-none p-3 h-12  bg-blue-200 drop-shadow-lg transition-all duration-500 items-center text-md md:sticky fixed`}
     >
-        {/* Left side of navbar w/ page links */}
-      <span className="w-1/4 flex justify-around items-center text-center">
+      {/* Left side of navbar w/ page links */}
+      <span
+        className=" hidden
+      md:w-1/4 md:flex md:justify-around items-center text-center sm:max-w-[869px]
+      "
+      >
         {socials.map((socialSite, idx) => {
           return (
             <li key={idx}>
@@ -103,10 +109,9 @@ function Navbar() {
         })}
       </span>
 
-      
       {/* Logo */}
       <span
-        className="text-2xl text-center cursor-pointer font-zidan text-blue-800 w-1/2"
+        className="md:text-2xl md:text-center md:cursor-pointer font-zidan text-left text-blue-800 w-1/2"
         onClick={() => {
           window.scrollTo(0, 0);
         }}
@@ -115,7 +120,7 @@ function Navbar() {
       </span>
 
       {/* Right side of navbar w/ page links */}
-      <span className="w-1/4 flex justify-around scroll-smooth text-md">
+      <span className="hidden md:w-1/4 md:flex md:justify-around scroll-smooth text-md">
         {links.map((link, idx) => {
           return (
             <li className="md:border-b-0" key={link.idx}>
@@ -124,11 +129,7 @@ function Navbar() {
           );
         })}
 
-      
-        <button
-          onClick={() => setDarkMode(!darkMode)}
-          className=""
-        >
+        <button onClick={() => setDarkMode(!darkMode)} className="">
           {darkMode ? (
             <LightModeOutlinedIcon className=" text-center pb-1" />
           ) : (
@@ -138,16 +139,16 @@ function Navbar() {
       </span>
 
       {/* MOBILE (hamburger btn) */}
-      <div className="md:hidden">
+      <span className="md:hidden w-1/2 text-right">
         <button
-          className="p-2"
+          // className="p-2 text-right justify-self-end "
           onClick={() => {
             setNavbar(!navbar);
           }}
         >
           {navbar ? <CloseIcon /> : <MenuIcon />}
         </button>
-      </div>
+      </span>
       {/* <div
         className={`flex flex-col justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
           navbar ? "p-12 md:p-0 block" : "hidden"
