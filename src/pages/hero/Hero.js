@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Hero.module.css'
 
+// const defaultTheme = require('tailwindcss/defaultTheme')
 
 export default function Hero() {
   return (
