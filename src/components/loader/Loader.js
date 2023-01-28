@@ -11,7 +11,7 @@ export default function Loader() {
     <div className=" ">
       <div
         id="loader"
-        className="font-zidan text-8xl w-full text-center pt-[calc(100vh/3.5)] fixed tracking-[.05em] p-8"
+        className="font-zidan text-7xl md:text-8xl w-full text-center pt-[calc(100vh/3.5)] fixed tracking-[.05em] p-8"
       >
         <Typewriter
           options={{
@@ -23,7 +23,7 @@ export default function Loader() {
         />
       </div>
 
-      <div className="fixed  md:relative font-raleway text-2xl md:align-center md:text-center md:mt-4 md:pt-4">
+      <div className="font-raleway text-center w-full sm:text-green-500 md:text-pink-500">
         Software Engineer & Designer
       </div>
     </div>
