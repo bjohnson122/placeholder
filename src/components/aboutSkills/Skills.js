@@ -11,6 +11,7 @@ import postgresql from "/public/icons/postgresql.png";
 import react from "/public/icons/React-icon.png";
 import redux from "/public/icons/redux.png";
 import tailwind from "/public/icons/Tailwind.svg.png";
+import git from 'public/icons/Git.png'
 import SkillsIcon from "./SkillsIcon";
 
 const skills = [
@@ -25,6 +26,7 @@ const skills = [
   { src: react, text: "React" },
   { src: redux, text: "Redux" },
   { src: firebase, text: "Firebase" },
+  { src: git, text: "Git" },
 ];
 
 export default function Skills() {
