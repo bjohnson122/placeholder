@@ -74,16 +74,26 @@ function useScrollDirection() {
   return scrollDirection;
 }
 
+function handleMounting() {
+  setTimeout(() => {
+    console.log("the navbar is here");
+  }, 3000);
+}
+
 function Navbar() {
   const scrollDirection = useScrollDirection();
   const [navbar, setNavbar] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  // useEffect(() => {
+  //   handleMounting();
+  // });
+
   return (
     <div
       className={`fixed 
-      ${
-        scrollDirection === "down" ? "md:-top-24" : "md:top-0"
-      } 
+      ${scrollDirection === "down" ? "md:-top-24" : "md:top-0"} 
       flex w-screen list-none p-3 h-12  bg-blue-200 drop-shadow-lg transition-all duration-500 items-center text-md md:sticky fixed`}
     >
       {/* Left side of navbar w/ page links */}
@@ -123,7 +133,7 @@ function Navbar() {
       <span className="hidden md:w-1/4 md:flex md:justify-around scroll-smooth text-md">
         {links.map((link, idx) => {
           return (
-            <li className="md:border-b-0" key={link.idx}>
+            <li className="md:border-b-0" key={idx}>
               <a href={link.href}>{link.title}</a>
             </li>
           );
@@ -155,22 +165,22 @@ function Navbar() {
         }`}
       ></div> */}
       {/* <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-          <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2  md:hover:text-purple-600 md:hover:bg-transparent">
+          <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2  md:hover:text-purple-600 md:hover:">
             <Link href="#about" onClick={() => setNavbar(!navbar)}>
               About
             </Link>
           </li>
-          <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+          <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-white">
             <Link href="#blog" onClick={() => setNavbar(!navbar)}>
               Blogs
             </Link>
           </li>
-          <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+          <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-white">
             <Link href="#contact" onClick={() => setNavbar(!navbar)}>
               Contact
             </Link>
           </li>
-          <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+          <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-white">
             <Link href="#projects" onClick={() => setNavbar(!navbar)}>
               Projects
             </Link>

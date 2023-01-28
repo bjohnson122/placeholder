@@ -34,10 +34,10 @@ export default function Skills() {
     <div>
       <p>Hi there! I&apos;m Breana.</p> More of my about info will go here :)
       <br />
-      <div class="relative flex py-5 items-center">
-        <div class="flex-grow border-t border-gray-500 mt-20"></div>
-        <span class="flex-shrink mx-4 text-gray-700 mt-20">Skills</span>
-        <div class="flex-grow border-t border-gray-500 mt-20"></div>
+      <div className="relative flex py-5 items-center">
+        <div className="flex-grow border-t border-gray-500 mt-20"></div>
+        <span className="flex-shrink mx-4 text-gray-700 mt-20">Skills</span>
+        <div className="flex-grow border-t border-gray-500 mt-20"></div>
       </div>
 
 {/* m-auto md:flex-shrink relative flex md:flex-row flex-col items-center gap-4 overflow-hidden */}
