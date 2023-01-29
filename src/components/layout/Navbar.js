@@ -7,7 +7,6 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import ArticleIcon from "@mui/icons-material/Article";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import Link from "next/link";
 // import { useScrollDirection } from 'hooks';
 
 const links = [
@@ -29,22 +28,22 @@ const socials = [
   {
     title: "GitHub",
     webLink: "https://github.com/bjohnson122",
-    component: <GitHubIcon />,
+    component: <GitHubIcon className="scale-110 mb-1" />,
   },
   {
     title: "LinkedIn",
     webLink: "https://linkedin.com/in/breanaj",
-    component: <LinkedInIcon />,
+    component: <LinkedInIcon className="scale-110 mb-1" />,
   },
   {
     title: "Email",
     webLink: "mailto:brecjohnson@gmail.com",
-    component: <MailOutlineIcon />,
+    component: <MailOutlineIcon className="scale-110 mb-1" />,
   },
   {
     title: "Resume",
     webLink: "/resume.pdf",
-    component: <ArticleIcon />,
+    component: <ArticleIcon className="scale-110 mb-1" />,
   },
 ];
 
@@ -94,7 +93,7 @@ function Navbar() {
     <div
       className={`fixed 
       ${scrollDirection === "down" ? "md:-top-24" : "md:top-0"} 
-      flex w-screen list-none p-3 h-12  bg-blue-200 drop-shadow-lg transition-all duration-500 items-center text-md md:sticky fixed`}
+      flex w-screen list-none p-3 h-14  bg-blue-200 drop-shadow-lg transition-all duration-500 items-center text-md md:sticky fixed`}
     >
       {/* Left side of navbar w/ page links */}
       <span
@@ -106,7 +105,7 @@ function Navbar() {
           return (
             <li key={idx}>
               <a
-                className="text-[0.5rem]  block"
+                className="text-[0.6rem]  block"
                 href={socialSite.webLink}
                 target="_blank"
                 rel="noopener noreferrer"

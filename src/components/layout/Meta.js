@@ -6,11 +6,11 @@ const name = "Breana Johnson";
 const defaultDescription =
   "Breana Johnson is a full-stack software engineer and UX/UI enthusiast.";
 
-function Meta({ title, description }) {
+function Meta({ title = "Designer and Developer", description }) {
   const titleText = [name, title].filter(Boolean).join(" | ");
   return (
     <Head>
-      <title>{titleText || name}</title>
+      <title>{titleText}</title>
       <meta name="description" content={description || defaultDescription} />
       <meta name="author" content="Breana Johnson" />
 
