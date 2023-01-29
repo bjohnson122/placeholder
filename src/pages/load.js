@@ -7,9 +7,9 @@ function Load() {
   useEffect(() => {});
   return (
     <div>
-
-      <Loader />
-      {/* <Image src={pic} className='justify-center items-center align-middle text-center' alt='hi' width={300}/> */}
+TESTTTT
+      {/* <Loader /> */}
+      <Image src={pic} className='justify-center items-center align-middle text-center' alt='hi' width={300}/>
     </div>
   );
 }
