@@ -7,24 +7,8 @@ import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
-  // const [path, setPath] = useState(null)
   const router = useRouter();
-
   const path = router.pathname;
-
-  // const finishedLoadingHomepage = !loading && (path === '/')
-
-  const loadDuration = setTimeout(() => {
-    console.log("the loader is GONEEE :(");
-    setLoading(!loading);
-    // setPath(window.location.pathname)
-  }, 2500);
-
-  useEffect(() => {
-    loadDuration;
-    clearTimeout(loadDuration);
-    console.log(path);
-  });
 
   const loaderFadeAnimation = {
     key: "loader fade",
@@ -34,9 +18,18 @@ export default function App({ Component, pageProps }) {
     exit: { opacity: 0 },
   };
 
+  useEffect(() => {
+    const loadDuration = setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+    return () => {
+      clearTimeout(loadDuration);
+    };
+  }, []);
+
   return (
     <div>
-      {loading && path === "/" ? (
+      {loading && path === "/" && (
         <div>
           <AnimatePresence>
             <motion.div {...loaderFadeAnimation}>
@@ -44,7 +37,9 @@ export default function App({ Component, pageProps }) {
             </motion.div>
           </AnimatePresence>
         </div>
-      ) : (
+      )}
+
+      {!loading && (
         <div>
           <Layout>
             <Component {...pageProps} />
