@@ -4,7 +4,6 @@ import Projects from "./projects/Projects";
 import About from "./about/AboutSkills";
 import Contact from "./contact/Contact";
 import Image from "next/image";
-import Loader from "./load";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <About />
       <Projects />
       <Contact />
-      <Loader />
     </>
   );
 }

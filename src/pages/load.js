@@ -3,7 +3,7 @@ import Loader from "../components/loader/Loader";
 function Load() {
   useEffect(() => {});
   return (
-    <div className="z-50 ">
+    <div>
       <Loader  />
     </div>
   );
