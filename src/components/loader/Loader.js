@@ -33,7 +33,7 @@ export default function Loader() {
               autoStart: true,
               loop: false,
               delay: 100,
-              changeDeleteSpeed: 10,
+              changeDeleteSpeed: 12,
               pauseFor: 1400,
               delay: 75,
             }}
@@ -44,8 +44,7 @@ export default function Loader() {
 
         <motion.div
           {...loaderSmallTextAnimation}
-          className="font-raleway font-semibold pt-3 sm:pt-7 md:pt-6 relative text-[14px] xs:text-yellow-900 sm:text-purple-600
-         md:text-emerald-600 sm:text-[1.35rem]"
+          className="font-raleway font-semibold pt-3 sm:pt-7 md:pt-6 relative text-[14px] sm:text-[1.35rem]"
         >
           Software Engineer & Designer
         </motion.div>

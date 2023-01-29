@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import html from "/public/icons/html.png";
 import css from "/public/icons/css.png";
+import procreate from "/public/icons/procreate.png"
 import firebase from "/public/icons/firebase.png";
 import gatsby from "/public/icons/gatsby.png";
 import js from "/public/icons/js.png";
@@ -27,6 +28,8 @@ const skills = [
   { src: redux, text: "Redux" },
   { src: firebase, text: "Firebase" },
   { src: git, text: "Git" },
+  { src: procreate, text: "Procreate" },
+  
 ];
 
 export default function Skills() {
