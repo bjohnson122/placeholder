@@ -34,7 +34,7 @@ const loaderSmallTextAnimation = {
   key: "loader text",
   initial: { opacity: 0 },
   animate: { opacity: [0, 0.9, 0.9, 1] },
-  transition: { delay: 1.5, duration: 2.7 },
+  transition: { delay: 2, duration: 2.7 },
   exit: { opacity: 1 },
 };
 
@@ -43,7 +43,7 @@ export default function Loader() {
     <div className="h-full">
       <Meta />
       {/* containter */}
-      <div className="text-center w-full p-5 pt-[calc(100vh/4.6)]">
+      <div className="text-center w-full p-5 pt-[calc(100vh/3.5)]">
         {/* typing text */}
         <div
           className="font-zidan tracking-[.05em] text-[2.3rem]
@@ -74,7 +74,7 @@ export default function Loader() {
           Software Engineer & Designer
         </motion.div>
       </div>
-      <div>
+      <motion.div {...loaderSmallTextAnimation}>
         <ul className="flex justify-center space-x-7 m-1 p-2">
           <li>
             <a
@@ -110,7 +110,7 @@ export default function Loader() {
             </a>
           </li>
         </ul>
-      </div>
+      </motion.div>
       <motion.div
         {...loaderSmallTextAnimation}
         className="text-center justify-center text-[.8rem] sm:w-1/2 items-center p-9 sm:mr-[25vw] sm:ml-[25vw] pt-[2vh] "
