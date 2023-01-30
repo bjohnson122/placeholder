@@ -7,25 +7,25 @@ export default function Hero() {
     const router = useRouter();
 
   return (
-    <div className=" bg-red-400 relative mt-6 pt-6 sm:bg-slate-700">
-      <div className="text-center h-[90vh] ">
-        <p className="mt-0">Hi, my name is Breana and I am a(n)</p>
+    <div className=" bg-red-400 relative pt-6 ">
+      <div className="text-center h-[90vh] text-xl">
+        <p className="mt-0">Hi, my name is Breana and I am</p>
         {/* typewriter */}
-        <div className="font-raleway text-center text-2xl">
+        <div className="font-raleway text-center text-lg">
           <Typewriter
             options={{ loop: true }}
             onInit={(typewriter) => {
               typewriter
-                .typeString("Developer")
+                .typeString("a developer.")
                 .pauseFor(1200)
-                .deleteChars(7)
-                .typeString("signer")
-                .pauseFor(1200)
-                .deleteAll()
-                .typeString("Artist")
+                .deleteChars(8)
+                .typeString("signer.")
                 .pauseFor(1200)
                 .deleteAll()
-                .typeString("Wearer of many hats*")
+                .typeString("an artist.")
+                .pauseFor(1200)
+                .deleteAll()
+                .typeString("a wearer of many hats*")
                 .pauseFor(1200)
                 .deleteAll()
                 .start();
