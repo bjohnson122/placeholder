@@ -7,6 +7,7 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { ArticleIcon, GitHub } from "@mui/icons-material";
 
 import { motion, AnimatePresence } from "framer-motion";
+import Footer from "../layout/Footer";
 
 const socials = [
   {
@@ -46,7 +47,7 @@ export default function Loader() {
       <div className="text-center w-full p-5 pt-[calc(100vh/3.5)]">
         {/* typing text */}
         <div
-          className="font-zidan tracking-[.05em] text-[2.3rem]
+          className="font-zidan tracking-[.05em] text-[2.25rem]
           2xl:text-8xl
          sm:text-6xl
           md:text-7xl flex-nowrap block"
@@ -75,8 +76,8 @@ export default function Loader() {
         </motion.div>
       </div>
       <motion.div {...loaderSmallTextAnimation}>
-        <ul className="flex justify-center space-x-7 m-1 p-2">
-          <li>
+        <ul className="flex justify-center space-x-7 m-1 p-2 scale-[1.3]">
+          <li className="text-center">
             <a
               className="text-[0.6rem]  block"
               href="https://github.com/bjohnson122"
@@ -87,7 +88,7 @@ export default function Loader() {
               <br /> GitHub
             </a>
           </li>
-          <li>
+          <li className="text-center">
             <a
               className="text-[0.6rem]  block"
               href="mailto:brecjohnson@gmail.com"
@@ -98,7 +99,7 @@ export default function Loader() {
               <br /> Email
             </a>
           </li>
-          <li>
+          <li className="text-center">
             <a
               className="text-[0.6rem]  block"
               href="https://linkedin.com/in/breanaj"
@@ -118,6 +119,11 @@ export default function Loader() {
         A really cool portfolio site is in the works! Please check back
         momentarily. For now, checkout my projects on GitHub and connect with me
         via LinkedIn or email.
+      </motion.div>
+      <motion.div className="text-[0.7rem]"
+        {...loaderSmallTextAnimation}
+      >
+       <Footer/>
       </motion.div>
     </div>
   );
