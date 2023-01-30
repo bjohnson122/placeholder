@@ -29,23 +29,21 @@ export default function App({ Component, pageProps }) {
 
   return (
     <div>
-      {loading && path === "/" && (
+      
         <div>
-          <AnimatePresence>
-            <motion.div {...loaderFadeAnimation}>
+          
               <Loader />
-            </motion.div>
-          </AnimatePresence>
+           
         </div>
-      )}
+      {/* )}
 
       {!loading && (
         <div>
           <Layout>
             <Component {...pageProps} />
-          </Layout>
+          </Layout> 
         </div>
-      )}
+      )}*/}
     </div>
   );
 }

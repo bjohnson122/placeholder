@@ -1,17 +1,10 @@
-import Hero from "./hero/Hero";
-import Layout from "@/components/layout/Layout";
-import Projects from "./projects/Projects";
-import About from "./about/AboutSkills";
-import Contact from "../components/Contact";
-import Image from "next/image";
+
+import Loader from "@/components/loader/Loader";
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
+  <Loader />
     </>
   );
 }
