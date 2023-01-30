@@ -9,7 +9,7 @@ function Layout({ children }) {
     <div className='font-raleway font-normal'>
       <Meta title="Designer and Developer" />
       <Navbar />
-      <main className="md:pt-[1rem] pt-[2rem] md:flex flex-col p-2">{children}</main>
+      <main className=" md:flex flex-col overflow-x-hidden">{children}</main>
       <Footer />
     </div>
   );

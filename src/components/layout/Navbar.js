@@ -83,7 +83,7 @@ function Navbar() {
     <div
       className={`fixed 
       ${scrollDirection === "down" ? "md:-top-24" : "md:top-0"} 
-      flex w-screen list-none p-3 h-14  bg-blue-200 drop-shadow-lg transition-all duration-500 items-center text-md md:sticky fixed z-50`}
+      flex w-screen list-none p-3 h-14 pt-0 bg-blue-200 drop-shadow-lg transition-all duration-500 items-center text-md md:sticky fixed z-50`}
     >
       {/* Left side of navbar w/ page links */}
       <span
