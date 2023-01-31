@@ -116,7 +116,7 @@ export default function Loader() {
         {...loaderSmallTextAnimation}
         className="text-center justify-center text-[.8rem] sm:w-1/2 items-center p-9 sm:mr-[25vw] sm:ml-[25vw] pt-[2vh] "
       >
-        A really cool portfolio site is in the works! Please check back
+        A captivating portfolio site is in the works! Please check back
         momentarily. In the meantime, take a look at my projects on{" "}
         <a
           href="https://github.com/bjohnson122"
