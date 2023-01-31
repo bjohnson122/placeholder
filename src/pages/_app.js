@@ -35,15 +35,7 @@ export default function App({ Component, pageProps }) {
               <Loader />
            
         </div>
-      {/* )}
-
-      {!loading && (
-        <div>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout> 
-        </div>
-      )}*/}
+      
     </div>
   );
 }

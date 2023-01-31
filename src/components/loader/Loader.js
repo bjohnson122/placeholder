@@ -41,7 +41,7 @@ const loaderSmallTextAnimation = {
 
 export default function Loader() {
   return (
-    <div className="h-full">
+    <div className="h-screen bg-[#EFEFEF]">
       <Meta />
       {/* containter */}
       <div className="text-center w-full p-5 pt-[calc(100vh/3.5)]">
@@ -116,14 +116,35 @@ export default function Loader() {
         {...loaderSmallTextAnimation}
         className="text-center justify-center text-[.8rem] sm:w-1/2 items-center p-9 sm:mr-[25vw] sm:ml-[25vw] pt-[2vh] "
       >
-        A really cool portfolio site is in the works! Please check back
-        momentarily. For now, checkout my projects on GitHub and connect with me
-        via LinkedIn or email.
+        A captivating portfolio site is in the works! Please check back
+        momentarily. In the meantime, take a look at my projects on{" "}
+        <a
+          href="https://github.com/bjohnson122"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>{" "}
+        and connect with me via{" "}
+        <a
+          href="https://linkedin.com/in/breanaj"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>{" "}
+        or{" "}
+        <a
+          href="mailto:brecjohnson@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          email
+        </a>
+        .
       </motion.div>
-      <motion.div className="text-[0.7rem]"
-        {...loaderSmallTextAnimation}
-      >
-       <Footer/>
+      <motion.div className="text-[0.7rem]" {...loaderSmallTextAnimation}>
+        <Footer />
       </motion.div>
     </div>
   );
