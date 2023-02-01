@@ -1,2 +1,2 @@
 
-Bre's Portfoliooooooo 😊
+Bre's Portfolio made using NextJS and tailwindCSS😊
