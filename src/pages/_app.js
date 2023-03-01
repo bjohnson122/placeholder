@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }) {
       
         <div>
           
-              <Loader />
+              <Loader className=" dark:bg-[#101014] bg-[#faf8fd]"/>
            
         </div>
       
