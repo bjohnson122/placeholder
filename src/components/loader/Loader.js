@@ -41,7 +41,7 @@ const loaderSmallTextAnimation = {
 
 export default function Loader() {
   return (
-    <div className="h-screen bg-[#EFEFEF]">
+    <div className="h-screen dark:bg-[#191920] bg-[#faf8fd]">
       <Meta />
       {/* containter */}
       <div className="text-center w-full p-5 pt-[calc(100vh/3.5)]">
@@ -49,7 +49,7 @@ export default function Loader() {
         <div
           className="font-zidan tracking-[.05em] text-[2.25rem]
           2xl:text-8xl
-         sm:text-6xl
+         sm:text-6xl dark:text-[#F5F0F0] text-[#101014]
           md:text-7xl flex-nowrap block"
         >
           <Typewriter
@@ -70,13 +70,13 @@ export default function Loader() {
 
         <motion.div
           {...loaderSmallTextAnimation}
-          className="font-raleway font-semibold pt-3 sm:pt-7 md:pt-6 relative text-[14px] sm:text-[1.35rem]"
+          className="font-raleway font-semibold pt-3 sm:pt-7 md:pt-6 relative text-[14px] text-[#6959fa] sm:text-[1.35rem]"
         >
           Software Engineer & Designer
         </motion.div>
       </div>
       <motion.div {...loaderSmallTextAnimation}>
-        <ul className="flex justify-center space-x-7 m-1 p-2 scale-[1.3]">
+        <ul className="flex justify-center dark:text-[#F5F0F0] text-[#101014] space-x-7 m-1 p-2 scale-[1.3]">
           <li className="text-center">
             <a
               className="text-[0.6rem]  block"
@@ -114,7 +114,7 @@ export default function Loader() {
       </motion.div>
       <motion.div
         {...loaderSmallTextAnimation}
-        className="text-center justify-center text-[.8rem] sm:w-1/2 items-center p-9 sm:mr-[25vw] sm:ml-[25vw] pt-[2vh] "
+        className="text-center dark:text-[#F5F0F0] text-[#101014] justify-center text-[.8rem] sm:w-1/2 items-center p-9 sm:mr-[25vw] sm:ml-[25vw] pt-[2vh] "
       >
         A captivating portfolio site is in the works! Please check back
         momentarily. In the meantime, take a look at my projects on{" "}
@@ -122,6 +122,7 @@ export default function Loader() {
           href="https://github.com/bjohnson122"
           target="_blank"
           rel="noopener noreferrer"
+          className="text-[#6959fa] font-semibold"
         >
           GitHub
         </a>{" "}
@@ -130,6 +131,7 @@ export default function Loader() {
           href="https://linkedin.com/in/breanaj"
           target="_blank"
           rel="noopener noreferrer"
+          className="text-[#6959fa] font-semibold"
         >
           LinkedIn
         </a>{" "}
@@ -138,6 +140,7 @@ export default function Loader() {
           href="mailto:brecjohnson@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
+          className="text-[#6959fa] font-semibold"
         >
           email
         </a>

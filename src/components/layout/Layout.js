@@ -7,7 +7,7 @@ import Meta from "./Meta";
 function Layout({ children }) {
   return (
     <div className='font-raleway font-normal'>
-      <Meta title="Designer and Developer" />
+      <Meta title="Developer and Designer" />
      
       <main className=" md:flex flex-col overflow-x-hidden">{children}</main>
       <Footer />
